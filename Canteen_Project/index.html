@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Canteen - Food Ordering System</title>
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+   
+    
+    <nav class="navbar">
+        <div class="logo">College Canteen</div>
+        <div class="nav-items">
+            <button id="myOrdersBtn" class="nav-btn">My Orders</button>
+            <button id="cartBtn" class="cart-btn">
+                Cart <span id="cartCount">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Welcome to College Canteen</h1>
+                <p>Order delicious food from our menu</p>
+            </div>
+        </section>
+        <section class="menu-section">
+            <h1>Today's Menu</h1>
+            <div class="category-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="breakfast">Breakfast</button>
+                <button class="filter-btn" data-category="lunch">Lunch</button>
+                <button class="filter-btn" data-category="snacks">Snacks</button>
+                <button class="filter-btn" data-category="beverages">Beverages</button>
+            </div>
+            <div id="menuItems" class="menu-items">
+                <!-- Menu items will be dynamically loaded here -->
+            </div>
+        </section>
+
+        <div id="cart" class="cart">
+            <div class="cart-header">
+                <h2>Your Cart</h2>
+                <button id="closeCart" class="close-btn">&times;</button>
+            </div>
+            <div id="cartItems" class="cart-items">
+                <!-- Cart items will be displayed here -->
+            </div>
+            <div class="cart-footer">
+                <div class="total">
+                    Total: ₹<span id="cartTotal">0</span>
+                </div>
+                <button id="checkoutBtn" class="checkout-btn">Place Order</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="orderModal" class="modal">
+        <div class="modal-content">
+            <h2>Order Details</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="rollNo">Roll Number:</label>
+                    <input type="text" id="rollNo" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="order-summary">
+                    <h3>Order Summary</h3>
+                    <div id="orderSummary"></div>
+                    <div class="total">
+                        Total: ₹<span id="orderTotal">0</span>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Confirm Order</button>
+                <button type="button" class="cancel-btn" id="cancelOrder">Cancel </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Order History Modal -->
+    <div id="orderHistoryModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Order History</h2>
+                <button id="closeOrderHistory" class="close-btn">&times;</button>
+            </div>
+            <div id="orderHistoryContent" class="order-history-content">
+                <!-- Order history will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.order-status {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    background: #4ecdc4;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3bb7af;
+}
